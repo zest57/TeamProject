@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="kr.mr.mapper.MyPageMapper">
+  
+  <select id="memberList" resultType="memberDTO">
+  	select * from member
+  </select>
+  
+  <insert id="memberInsert" parameterType="memberDTO">
+     insert into member(id, pw, name, age, email, tel, zipcode, roadAddr, jibunAddr, detailAddr)
+     values(#{id}, #{pw}, #{name}, #{age}, #{email}, #{tel}, #{zipcode}, #{roadAddr}, #{jibunAddr}, #{detailAddr})
+  </insert>
+
+  
+  <delete id="memberDel" parameterType="Integer">
+  	delete from member where no = #{no}
+  </delete>
+  
+  <select id="memberInfo" parameterType="Integer" resultType="memberDTO">
+  	select * from member where no = #{no}
+  </select>
+  
+  <update id="memberUpdate" parameterType="memberDTO">
+  	update member set age=#{age}, email=#{email}, phone=#{tel} where no=#{no}
+  </update>
+  
+    <insert id="categoryInsert" parameterType="categoryDTO">
+     insert into category(cat_code, cat_name)
+     values(#{cat_code}, #{cat_name})
+  </insert>
+
+  <select id="categoryList" resultType="categoryDTO">
+  	select * from category ORDER BY cat_num = #{cat_num} DESC
+  </select>
+  
+  <delete id="categoryDel" parameterType="Integer">
+  	delete from category where cat_num = #{cat_num}
+  </delete>
+  
+  <select id="revHistory" resultType="RevHistoryDTO" >
+	select *
+	from car inner join reservation
+	on car.cNum = reservation.cNum
+	where reservation.id = #{id};
+  </select>
+  
+  
+    <select id="revHistory2" resultType="RevHistoryDTO" >
+	select *
+	from car inner join reservation
+	on car.cNum = reservation.cNum
+	where reservation.id = #{id} and status = "Y"
+  </select>
+  
+  
+  <select id="reservationList" resultType="RevHistoryDTO" >
+   select *
+   from car inner join reservation
+   on car.cNum = reservation.cNum;
+  </select>  
+  
+  
+  
+</mapper>
+  
+  

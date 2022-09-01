@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* 
+body{
+    background-color: #111;
+    color: #fff;
+    font-size: 20px;
+}
+ */
+.container{
+    margin: auto;
+}
+
+i{
+    color:#fff;
+}
+
+
+.icon1{
+    padding: 20px;
+    font-size: 100px;
+}
+
+.icon2{
+    padding: 20px;
+    font-size: 100px;
+}
+
+.cat{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1{
+	font-size: 28px;
+}
+
+p{
+	fint-size: 16px;
+}
+
+
+
+/* scrollUp */
+
+#scrollUp, #back-top {
+  background: #f067ffb5;
+  height: 50px;
+  width: 50px;
+  right: 31px;
+  bottom: 18px;
+  position: fixed;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 48px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px 3px #c36f51;
+}
+
+@media (max-width: 575px) {
+
+  #scrollUp, #back-top {
+    right: 16px;
+    background-color:#c36f51;
+  }
+}
+
+
+#scrollUp a i, #back-top a i {
+  display: block;
+  line-height: 50px;
+}
+
+#flush-collapse1 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse2 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse3 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse4 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse5 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse6 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse7 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse8 .accordion-body{
+	background-color:#333;
+}
+
+#flush-collapse9 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse10 .accordion-body{
+	background-color:#333;
+}
+
+#flush-collapse11 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse12 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse13 .accordion-body{
+	background-color:#333;
+}
+#flush-collapse14 .accordion-body{
+	background-color:#333;
+}

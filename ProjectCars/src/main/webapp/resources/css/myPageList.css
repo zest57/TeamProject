@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+#myPageList .table td{
+	color:#fff;
+}
+
+#myPageList .table td:hover{
+	color: darkorchid;
+}
+
+/* img{
+    width: 50px;
+    height: 30px;
+} */
+
+
+/* btn */
+
+/* 
+#myPageList .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    border: 1px solid red;
+    
+  } */
+
+/* 5 */
+
+/* #myPageList .btn-5 {
+   width: 130px;
+   height: 40px;
+   line-height: 42px;
+   padding: 0;
+   border: none;
+   background: blue;
+   background: linear-gradient(0deg, rgb(43, 32, 58) 0%, rgb(119, 99, 221) 100%);
+  }
+#myPageList .btn-5:hover {
+    color: #fff;
+    background: transparent;
+     box-shadow:none;
+  } */
+/* #myPageList .btn-5:before,
+#myPageList .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: rgb(211, 203, 203);
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+#myPageList .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+#myPageList .btn-5:hover:before,
+#myPageList .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+   */
+  
+/* close btn */
+
+
+#close_btn @-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+#close_btn @keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.close:hover,
+.close:focus {
+  box-shadow: inset -5em 0 0 0 var(--hover), inset 5em 0 0 0 var(--hover);
+}
+
+
+.close {
+  --color: #ff7f82;
+  --hover: #fc0000;
+}
+
+
+#close_btn button {
+  color: var(--color);
+  transition: 0.25s;
+}
+#close_btn button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+
+#close_btn button {
+	 width: 130px;
+    height: 40px;
+  background: none;
+  border: 1px solid;
+  /* font: inherit; */
+  line-height: 1;
+  margin: ;
+ 
+  padding: 1em 2em; 
+}
+
+
+

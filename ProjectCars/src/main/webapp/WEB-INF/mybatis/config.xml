@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <typeAliases>
+  	<typeAlias type="kr.mr.model.BoardVO" alias="boardVO"/>
+<!--   	<typeAlias type="kr.mr.model.ReplyVO" alias="replyVO"/>   -->
+  	<typeAlias type="kr.mr.model.MemberDTO" alias="memberDTO"/>
+  	<typeAlias type="kr.mr.model.CategoryDTO" alias="categoryDTO"/>
+  	<typeAlias type="kr.mr.model.VehicleDTO" alias="vehicleDTO"/>
+  	<typeAlias type="kr.mr.model.WishDTO" alias="wishDTO"/>
+  	<typeAlias type="kr.mr.model.ReserveDTO" alias="reserveDTO"/>
+  	<typeAlias type="kr.mr.model.ImageDTO" alias="imageDTO"/>
+  	<typeAlias type="kr.mr.model.RevHistoryDTO" alias="revHistoryDTO"/>
+  </typeAliases>
+</configuration>

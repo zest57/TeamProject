@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+h3{
+	color: #fff;
+	font-family: 'ONE-Mobile-POP';
+	font-size: 2.4em;
+	text-align: center;
+}
+
+th{
+	color: #fff;
+	font-family: 'GmarketSansMedium';
+	font-weight: bolder;
+	font-size: 1.4em;
+}
+td{
+	color: #fff;
+	font-family: 'GmarketSansMedium';
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.mr.mapper.VehicleMapper">
+
+  <insert id="vehicleInsert" parameterType="VehicleDTO">
+     insert into car(cName,price,category_fk,color,company,cSpec,contents,fileName)
+     values(#{cName}, #{price}, #{category_fk},#{color}, #{company}, #{cSpec}, #{contents}, #{fileName})
+  </insert>
+
+
+  <select id="vehicleList" resultType="VehicleDTO">
+	select * from car
+  </select>
+
+  
+  <delete id="vehicleDel" parameterType="Integer">
+  	delete from car where cNum = #{cNum}
+  </delete>
+
+  <select id="vehicleUpdateView" resultType="VehicleDTO">
+		select * from car where cNum = #{cNum}
+  </select>
+  
+  <update id="vehicleUpdateOk" parameterType="VehicleDTO">
+		update car set cName=#{cName}, price=#{price},company=#{company},
+		color=#{color},cSpec=#{cSpec},fileName=#{fileName},contents=#{contents},category_fk=#{category_fk} 
+		where cNum=#{cNum}		
+  </update>
+  
+  
+
+  
+<update id="vehicleStatusY" parameterType="Integer">
+		update car set status="Y"
+		where cNum=#{cNum}		
+</update>
+  
+
+
+<!-- car_main.jsp -->
+  <select id="vehicleGetter" parameterType="Integer" resultType="VehicleDTO">
+		select * from car where cNum = #{cNum}
+  </select>
+  
+  <!-- 추천상품으로 검색 -->
+  <select id="specGetter"  resultType="VehicleDTO">
+		select * from car where cSpec = ${cSpec}
+  </select>	
+  
+  
+  
+<!-- 차량반납 status "N" -->  
+ <update id="vehicleStatusToN">
+    update car set status = "N" 
+ 	where status = "Y" and cNum = #{cNum}
+ </update> 
+  
+  
+</mapper>

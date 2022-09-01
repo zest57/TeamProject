@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.mr.mapper.ImageMapper">
+
+  <insert id="imageInsert" parameterType="ImageDTO">
+<!--      insert into carImage(carIMAGE1,carIMAGE2,carIMAGE3,carIMAGE4,carIMAGE5,carIMAGE6,cNum)
+     values(#{carIMAGE1}, #{carIMAGE2}, #{carIMAGE3},#{carIMAGE4}, #{carIMAGE5}, #{carIMAGE6}, #{cNum}) -->
+     insert into carImage(iName1,iName2,iName3,iName4,iName5,iName6,cNum)
+     values(#{iName1},#{iName2},#{iName3},#{iName4},#{iName5},#{iName6},#{cNum})
+  </insert>
+  
+  <select id="imageGetter" parameterType="Integer" resultType="ImageDTO">
+		select * from carImage where cNum = #{cNum}
+  </select>
+
+
+</mapper>

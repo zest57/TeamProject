@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.mr.mapper.CategoryMapper">
+
+  <insert id="categoryInsert" parameterType="categoryDTO">
+     insert into category(cat_code, cat_name)
+     values(#{cat_code}, #{cat_name})
+  </insert>
+
+  <select id="categoryList" resultType="categoryDTO">
+  	select * from category ORDER BY cat_num = #{cat_num} DESC
+  </select>
+  
+  
+  <delete id="categoryDel" parameterType="Integer">
+  	delete from category where cat_num = #{cat_num}
+  </delete>
+
+  
+</mapper>

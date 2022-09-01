@@ -1,0 +1,44 @@
+
+body{ 
+background: url("../../resources/image/Register.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+a{
+  text-decoration:none;
+  color: #fff;
+}
+
+a:hover{
+  transition: 1.2s;
+  cursor: pointer; 
+}
+
+
+.l-col-wrap {
+  display: flex;
+}
+
+
+
+.form-box {
+  max-width: 50em;
+  background-color: rgba(255, 255, 255, 0.77);
+  border-radius: 0.25em;
+  overflow: hidden;
+  margin: 8em auto 0;
+  box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.5);
+}
+.form-box__form {
+  padding: 2em;
+}
+.form-box__content {
+  background-color: #fff;
+  padding: 2em;
+}

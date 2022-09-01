@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.mr.mapper.ReserveMapper">
+
+  <insert id="reserveInsert" parameterType="reserveDTO">
+     insert into reservation(revName, revJumin1,revJumin2,revTel,revAddr,revDate1,revDate2,dateCnt,totalPrice,cNum,id)
+     values(#{revName}, #{revJumin1},#{revJumin2},#{revTel},#{revAddr},#{revDate1},#{revDate2},#{dateCnt},#{totalPrice},#{cNum},#{id})
+  </insert>
+
+
+
+  <select id="reserveList" resultType="reserveDTO">
+  	select * from reservation
+  </select>
+  
+  
+
+    <delete id="deleteRevHistory" parameterType="Integer">
+  	delete from reservation
+	where cNum =  #{cNum}
+  </delete>
+
+  
+  
+
+</mapper>

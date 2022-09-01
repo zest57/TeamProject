@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.mr.mapper.MemberMapper">
+
+  <select id="memberList" resultType="memberDTO">
+  	select * from member
+  </select>
+  
+  <insert id="memberInsert" parameterType="memberDTO">
+     insert into member(id, pw, name, age, email, tel, zipcode, roadAddr, jibunAddr, detailAddr)
+     values(#{id}, #{pw}, #{name}, #{age}, #{email}, #{tel}, #{zipcode}, #{roadAddr}, #{jibunAddr}, #{detailAddr})
+  </insert>
+
+  
+  <delete id="memberDel" parameterType="Integer">
+  	delete from member where no = #{no}
+  </delete>
+  
+  <select id="memberInfo" parameterType="Integer" resultType="memberDTO">
+  	select * from member where no = #{no}
+  </select>
+  
+  <update id="memberUpdate" parameterType="memberDTO">
+  	update member set id=#{id}, pw=#{pw},age=#{age}, email=#{email}, tel=#{tel}, detailAddr=#{detailAddr} where no=#{no}
+  </update>
+  
+  <select id="memberLogin" resultType="memberDTO">
+  	select * from member where id = #{id} and pw=#{pw}
+  </select>
+  
+  
+    <update id="insertById" parameterType="memberDTO">
+  	update member set cNum=#{cNum}, isRented="Y"
+  	where id=#{id}
+  </update>
+  
+  <select id="memberGetter" parameterType="String" resultType="memberDTO">
+  	select * from member where id = #{id}
+  </select>
+  
+  <!-- id 중복체크 -->
+  <select id="memberIdChk" parameterType="String" resultType="String">
+     select id from member where id = #{mId}
+  </select>
+  
+  
+  <!-- 각 회원의 차량렌트여부 -->  
+  <select id="isRented" resultType="memberDTO">
+  	SELECT isRented
+  	FROM car INNER JOIN member 
+  	ON car.cNum = member.cNum
+  	WHERE member.id = #{id};
+  </select>
+  
+  
+    <!-- 멤버 isRented초기화 -->
+  <update id="memberisRentedToNull" parameterType="memberDTO">    
+ 	update member set isRented = null 
+    where isRented = "N" or isRented = "Y" and id = #{id};
+  </update>
+  
+  
+  
+  
+  
+  
+</mapper>

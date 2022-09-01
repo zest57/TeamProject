@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body {
+    position: relative;
+    background-color: #111;
+    color:#fff
+}
+
+h1{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* scrollUp */
+
+#scrollUp, #back-top {
+  background: #f067ffb5;
+  height: 50px;
+  width: 50px;
+  right: 31px;
+  bottom: 18px;
+  position: fixed;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 48px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px 3px rgba(155, 85, 170, 0.550);
+}
+
+@media (max-width: 575px) {
+
+  #scrollUp, #back-top {
+    right: 16px;
+  }
+}
+
+
+#scrollUp a i, #back-top a i {
+  display: block;
+  line-height: 50px;
+}
+
